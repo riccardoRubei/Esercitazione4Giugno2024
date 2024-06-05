@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>it.univaq</groupId>
+  <artifactId>Esercitazioni4Giugno2024</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>JavaFX</name>
+  
+  
+	<dependencies>
+
+		<!-- Junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+  <groupId>org.apache.xmlgraphics</groupId>
+  <artifactId>batik-all</artifactId>
+  <version>1.17</version>
+</dependency>
+		
+  <dependency>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-controls</artifactId>
+    <version>22.0.1</version>
+  </dependency>
+		
+	</dependencies>
+	
+	<build>
+	    <plugins>
+			
+		<plugin>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.8</version>
+        <configuration>
+            <mainClass>HelloFX</mainClass>
+        </configuration>
+    	</plugin>
+    	
+	      <plugin>
+		  <groupId>org.codehaus.mojo</groupId>
+		  <artifactId>exec-maven-plugin</artifactId>
+		  <version>3.0.0</version>
+	        <configuration>
+			 <!--<mainClass>generics.GenericsMain</mainClass>-->
+	         <source>1.21</source>
+	         <target>1.21</target>
+	        </configuration>
+	        </plugin>
+	    </plugins>
+	   </build>
+  
+</project>
